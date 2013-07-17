@@ -22,16 +22,36 @@ public class test {
 		return array;
 	}
 	
+	public static String join(String [] stringList){
+		String sentence = "";
+		for (String str:stringList)
+			sentence+=str;
+		return sentence;
+	}
+	
+	public static String join2(String [] stringList){
+		StringBuffer sentence = new StringBuffer();
+		for (String s:stringList)
+			sentence.append(s);
+		return sentence.toString();
+	}
+	
 	public static void main(String args[]){
 		student [] students = new student [STUDENTNUM];
+		String [] stringList = new String[STUDENTNUM];
 		for (int i = 0; i<STUDENTNUM; i++)
 			students[i] = new student("byang", index++);
+		for (int i = 0; i<STUDENTNUM; i++)
+			stringList[i] = "abc";
 		Iterator iter = buildMap(students).keySet().iterator();
 //		while(iter.hasNext()){
 //			System.out.println(buildMap(students).get(iter.next()).getName());
 //		}
 		//System.out.println(buildMap(students).get(0).getName());
-		System.out.println(merge(students).size());
+		
+		
+		//System.out.println(merge(students).size());
+		System.out.println(join2(stringList));
 		
 	}
 	
