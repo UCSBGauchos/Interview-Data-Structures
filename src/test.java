@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,6 +15,13 @@ public class test {
 		return map;
 	}
 	
+	public static ArrayList<student> merge(student [] students){
+		ArrayList <student> array = new ArrayList <student>();
+		for(student s:students) array.add(s);
+		for(student s:students) array.add(s);
+		return array;
+	}
+	
 	public static void main(String args[]){
 		student [] students = new student [STUDENTNUM];
 		for (int i = 0; i<STUDENTNUM; i++)
@@ -22,6 +30,10 @@ public class test {
 //		while(iter.hasNext()){
 //			System.out.println(buildMap(students).get(iter.next()).getName());
 //		}
-		System.out.println(buildMap(students).get(0).getName());
+		//System.out.println(buildMap(students).get(0).getName());
+		System.out.println(merge(students).size());
+		
 	}
+	
+	
 }
