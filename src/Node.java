@@ -1,12 +1,13 @@
 //LinkList Node
 
 public class Node {
-	private Node next; //for linking the next node
+	public Node next; //for linking the next node
 	private int data;
 	
 	public Node(int _data){
 		this.data = _data;
 	}
+	
 	
 	public void addToTail(int data){
 		Node end = new Node(data);
